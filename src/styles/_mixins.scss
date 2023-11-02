@@ -1,0 +1,63 @@
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 480px) {
+      @content;
+    }
+  } @else if $breakpoint == tablet-portrait {
+    @media (min-width: 481px) and (max-width: 767px) {
+      @content;
+    }
+  } @else if $breakpoint == tablet-landscape {
+    @media (min-width: 768px) and (max-width: 1023px) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+}
+
+@mixin transformSkewScale($x, $y) {
+  -webkit-transform: skew($x) scaleX($y);
+  -ms-transform: skew($x) scaleX($y);
+  transform: skew($x) scaleX($y);
+}
+
+.mx-50 {
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.my-30 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.me-50 {
+  margin-right: 50px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.px-50 {
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.py-50 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.px-20 {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.py-20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
